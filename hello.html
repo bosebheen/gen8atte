@@ -1,7 +1,21 @@
 <html>
 <body>
+<button onhover="typeWriter()">Click me</button>
+<script>
+    
+var i = 0;
+var txt = 'Lorem ipsum dummy text blabla.';
+var speed = 50;
 
-<h1>hello world</h1>
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+ 
+  </script>                   
 </body>
 
 </html>
